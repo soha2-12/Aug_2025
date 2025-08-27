@@ -1,0 +1,16 @@
+# to check whether the i'th bit is set bit or not
+n=int(input())
+i=int(input())
+print(n&(1<<i))
+# to set the i'th bit
+n=int(input())
+i=int(input())
+print(n|(1<<i))
+# to clear the i'th bit
+n=int(input())
+i=int(input())
+print(n&~(1<<i))
+#toggle (make 0 to 1 and 1 to 0)
+n=int(input())
+i=int(input())
+print(n^(1<<i))
