@@ -1,0 +1,9 @@
+#integer to binary
+n=int(input("enter integer"))
+b=bin(n)
+print(b[2:])
+#binary to integer
+b = input("enter binary number ")
+n = int(b, 2)  
+print(n)        
+
