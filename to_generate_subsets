@@ -1,0 +1,17 @@
+
+def generate(ind,subset,ans,nums):
+    if(ind==len(nums)): #out of bound
+        ans.append(subset.copy()) #adding the copy of a subset into the answer
+        return 
+    subset.append(nums[ind])#adding the possition value into the subset
+    generate(ind+1,subset,ans,nums)#to change the possition from left to right and taking
+    subset.pop() #pop means to remove the last element from the subset
+    generate(ind+1,subset,ans,nums)#not taking
+def subset(nums):
+    ind=0
+    subset=[]
+    ans=[]
+    generate(ind,subset,ans,nums)
+    return ans
+nums=list(map(int,input().split()))
+print(subset(nums))
